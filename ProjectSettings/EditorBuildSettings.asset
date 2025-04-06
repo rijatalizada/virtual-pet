@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0210b932e8023e940b512b521538d4aa
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/LivingRoom.unity
     guid: 6d3dafeedfe5be84f8c1b2ae0f13f223
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 12254e56ca688c849936c002015f210d
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: 9a79f151dd17c134d97fff982e3d11d5
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 805c71994dc6a46b1b46882072af9585, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 6cdc8b9db73a14299952fba0ade47155, type: 2}
