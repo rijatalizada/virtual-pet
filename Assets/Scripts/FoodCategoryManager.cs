@@ -35,5 +35,7 @@ public class FoodCategoryManager : MonoBehaviour
         {
             menuPanel.SetActive(true);
         }
+
+        
     }
 }
