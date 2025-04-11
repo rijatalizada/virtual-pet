@@ -2,40 +2,28 @@ using UnityEngine;
 
 public class FoodCategoryManager : MonoBehaviour
 {
-    public GameObject[] categoryPanels; // Meals, Drinks, etc.
-    public GameObject menuPanel;        // Menu with food categories
+    public GameObject menuPanel;          // The main category panel (with Meals, Drinks, etc.)
+    public GameObject[] categoryPanels;   // All category panels
 
-    public void OpenCategory(int index)
+    public void OpenCategoryPanel(int index)
     {
-        foreach (GameObject panel in categoryPanels)
-        {
-            panel.SetActive(false);
-        }
+        menuPanel.SetActive(false); // hide main menu
 
-        if (index >= 0 && index < categoryPanels.Length)
+        for (int i = 0; i < categoryPanels.Length; i++)
         {
-            categoryPanels[index].SetActive(true);
-        }
-
-        if (menuPanel != null)
-        {
-            menuPanel.SetActive(false);
+            categoryPanels[i].SetActive(i == index); // show selected, hide others
         }
     }
 
-    // 👇 Call this when pressing X in category panels
-    public void BackToMenu()
+    public void CloseCategoryPanel()
     {
+        // hide all food panels
         foreach (GameObject panel in categoryPanels)
         {
             panel.SetActive(false);
         }
 
-        if (menuPanel != null)
-        {
-            menuPanel.SetActive(true);
-        }
-
-        
+        // show the main category panel again
+        menuPanel.SetActive(true);
     }
 }
